@@ -3,6 +3,9 @@ import { auth, storage } from '@/lib/comment-config'
 
 const { GET: _GET, POST: _POST, PATCH: _PATCH, DELETE: _DELETE } = NextComment({ auth, storage })
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 async function withParams(handler, req, ctx) {
   const params = await ctx.params
   const normalized = { comment: params?.comment ?? [] }
