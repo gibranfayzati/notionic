@@ -4,6 +4,7 @@ import BLOG from '@/blog.config'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
 import HomeIcon from '@heroicons/react/24/outline/HomeIcon'
+import BookOpenIcon from '@heroicons/react/24/outline/BookOpenIcon'
 import NewspaperIcon from '@heroicons/react/24/outline/NewspaperIcon'
 import RectangleStackIcon from '@heroicons/react/24/outline/RectangleStackIcon'
 import SparklesIcon from '@heroicons/react/24/outline/SparklesIcon'
@@ -31,6 +32,13 @@ const NavBar = () => {
       name: t.NAV.INDEX,
       to: BLOG.path || '/',
       icon: <HomeIcon className='inline-block mb-1 h-5 w-5' />,
+      show: true
+    },
+    {
+      id: 5,
+      name: 'Blog',
+      to: '/main',
+      icon: <BookOpenIcon className='inline-block mb-1 h-5 w-5' />,
       show: true
     },
     {

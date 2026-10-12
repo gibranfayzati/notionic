@@ -4,7 +4,7 @@ import Pagination from '@/components/Pagination'
 import { getAllPosts } from '@/lib/notion'
 import BLOG from '@/blog.config'
 
-const Page = ({ postsToShow, page, showNext }) => {
+const MainPage = ({ postsToShow, page, showNext }) => {
   return (
     <Container>
       {postsToShow &&
@@ -39,11 +39,11 @@ export async function getStaticPaths() {
   const totalPages = Math.ceil(totalPosts / BLOG.postsPerPage)
   return {
     // remove first page, we 're not gonna handle that.
-    paths: Array.from({ length: totalPages - 1 }, (_, i) => ({
+    paths: Array.from({ length: Math.max(totalPages - 1, 0) }, (_, i) => ({
       params: { page: '' + (i + 2) }
     })),
     fallback: true
   }
 }
 
-export default Page
+export default MainPage

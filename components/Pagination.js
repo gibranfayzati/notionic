@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import BLOG from '@/blog.config'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
 import ChevronRightIcon from '@heroicons/react/24/outline/ChevronRightIcon'
@@ -20,8 +19,8 @@ const Pagination = ({ page, showNext }) => {
         <Link scroll={false}
           href={
             currentPage - 1 === 1
-              ? `${BLOG.path || '/'}`
-              : `/page/${currentPage - 1}`
+              ? '/main'
+              : `/main/page/${currentPage - 1}`
           }
         >
           <button rel='prev' className='block cursor-pointer'>
@@ -31,7 +30,7 @@ const Pagination = ({ page, showNext }) => {
         </Link>
       )}
       {showNext && (
-        <Link href={`/page/${currentPage + 1}`} scroll={false}>
+        <Link href={`/main/page/${currentPage + 1}`} scroll={false}>
           <button rel='next' className='block cursor-pointer'>
             {t.PAGINATION.NEXT}{' '}
             <ChevronRightIcon className='inline-block mb-1 h-5 w-5' />
