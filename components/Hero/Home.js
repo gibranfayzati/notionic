@@ -1,27 +1,27 @@
 import BLOG from '@/blog.config'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Avatar from './Avatar.js'
 import Social from '../Common/Social.js'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
-import EnvelopeIcon from '@heroicons/react/24/outline/EnvelopeIcon'
-import RssIcon from '@heroicons/react/24/outline/RssIcon'
-import ClipboardDocumentCheckIcon from '@heroicons/react/24/outline/ClipboardDocumentCheckIcon'
+// import { useState } from 'react'
+// import EnvelopeIcon from '@heroicons/react/24/outline/EnvelopeIcon'
+// import RssIcon from '@heroicons/react/24/outline/RssIcon'
+// import ClipboardDocumentCheckIcon from '@heroicons/react/24/outline/ClipboardDocumentCheckIcon'
 import NotionRenderer from '@/components/Post/NotionRenderer'
 
 const Hero = ({ blockMap }) => {
-  const [showCopied, setShowCopied] = useState(false)
+  // const [showCopied, setShowCopied] = useState(false)
   const { locale } = useRouter()
   const t = lang[locale]
 
-  const clickCopy = async () => {
-    setShowCopied(true)
-    navigator.clipboard.writeText(BLOG.link + '/feed')
-    setTimeout(() => {
-      setShowCopied(false)
-    }, 1000)
-  }
+  // const clickCopy = async () => {
+  //   setShowCopied(true)
+  //   navigator.clipboard.writeText(BLOG.link + '/feed')
+  //   setTimeout(() => {
+  //     setShowCopied(false)
+  //   }, 1000)
+  // }
 
   return (
     <>
@@ -34,7 +34,7 @@ const Hero = ({ blockMap }) => {
             subPageTitle={null}
           />
           <Social />
-          <div className='flex flex-col sm:flex-row sm:justify-center gap-4 mt-6'>
+          {/*<div className='flex flex-col sm:flex-row sm:justify-center gap-4 mt-6'>
             <Link passHref href='/contact' scroll={false}>
               <button className='w-full cursor-pointer bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center'>
                 <EnvelopeIcon className='inline-block text-gray-600 dark:text-day h-7 w-7 mt-1' />
@@ -75,7 +75,7 @@ const Hero = ({ blockMap }) => {
                 </span>
               </button>
             )}
-          </div>
+          </div>*/}
         </div>
         <Avatar className='w-2/5 flex items-center justify-center' />
       </div>

@@ -5,8 +5,6 @@ import { motion } from 'framer-motion'
 import Container from '@/components/Container'
 import Content from '@/components/Post/Content'
 import Aside from '@/components/Post/Aside'
-import Comments from '@/components/Post/Comments'
-import PostFooter from '@/components/Post/PostFooter'
 
 const Layout = ({ blockMap, content, frontMatter, fullWidth = false, subPage = false, pageId }) => {
   const [showSubPageTitle, setShowSubPageTitle] = useState(false)
@@ -44,8 +42,6 @@ const Layout = ({ blockMap, content, frontMatter, fullWidth = false, subPage = f
             pageTitle={showSubPageTitle ? pageTitle : null}
           />
         </motion.div>
-        <PostFooter />
-        <Comments frontMatter={frontMatter} />
     </Container>
   )
 }

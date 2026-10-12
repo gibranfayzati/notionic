@@ -25,13 +25,6 @@ const Footer = ({ fullWidth }) => {
 
   const links = [
     {
-      id: 0,
-      name: t.NAV.ABOUT,
-      to: BLOG.path || '/about',
-      icon: <UserIcon className='inline-block mb-1 h-5 w-5' />,
-      show: true
-    },
-    {
       id: 1,
       name: t.NAV.FRINEDS,
       to: '/friends',
@@ -88,16 +81,9 @@ const Footer = ({ fullWidth }) => {
           </div>
         </div>
 
-        <div className='text-gray-400 text-xs font-light py-4'>
-          © {from === y || !from ? y : `${from} - ${y}`} | {BLOG.author}
-          <p className='md:float-right'>
-            {t.FOOTER.COPYRIGHT_START}
-            <a className='underline' href={`${t.FOOTER.COPYRIGHT_LINK}`}>
-              {t.FOOTER.COPYRIGHT_NAME}
-            </a>
-            {t.FOOTER.COPYRIGHT_END}
-          </p>
-        </div>
+<div className='text-gray-400 text-xs font-light py-4'>
+  © {from === y || !from ? y : `${y}`} | {BLOG.author}
+</div>
       </footer>
     </div>
   )

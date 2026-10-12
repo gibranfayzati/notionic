@@ -11,7 +11,6 @@ import MagnifyingGlassIcon from '@heroicons/react/24/outline/MagnifyingGlassIcon
 import Bars3Icon from '@heroicons/react/24/outline/Bars3Icon'
 import Social from '../Common/Social.js'
 import ThemeSwitcher from './ThemeSwitcher.js'
-import LangSwitcher from './LangSwitcher.js'
 import Logo from '@/components/Common/Logo'
 const NavBar = () => {
   const router = useRouter()
@@ -89,7 +88,6 @@ const NavBar = () => {
 
       <div className='nav-func-btn block'>
         <ThemeSwitcher />
-        <LangSwitcher />
       </div>
 
       {/* Mobile Phone Menu */}

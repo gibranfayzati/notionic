@@ -9,9 +9,12 @@ const BlogPost = ({ post }) => {
       <Link passHref href={`${BLOG.path}/${post.slug}`} scroll={false}>
         <article
           key={post.id}
-          className='group flex flex-col overflow-hidden relative mb-5 md:mb-8 cursor-pointer rounded-xl p-5 md:h-[140px] bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
-        >
-          <Image
+          className='group flex flex-col overflow-hidden relative mb-5 md:mb-8 cursor-pointer rounded-xl p-5 md:h-[140px] backdrop-blur-sm
+          bg-gray-100/40
+          dark:bg-gray-800/40
+          hover:bg-gray-200/40
+          dark:hover:bg-gray-700/40'>
+                    <Image
             fill
             alt={`${post.title}`}
             src={post?.page_cover}

@@ -18,7 +18,7 @@ const NotionAvatar = (props) => (
       </path>
     </clipPath>
     <rect x='0' y='0' width='100%' height='100%' fill='lightblue' clipPath='url(#shape)'></rect>
-    <image x='150' y='150' height='100%' clipPath='url(#shape)' href='/avatar_color.svg' preserveAspectRatio='xMidYMid slice'></image>
+    <image x='0' y='0' width='100%' height='100%' clipPath='url(#shape)' href='/avatar_color.jpg' preserveAspectRatio='xMidYMid slice'></image>
   </svg>
 )
 
